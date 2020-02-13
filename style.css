@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.settings {
+  background-color: rgb(241, 169, 235);
+  width: 40vw;
+  margin: 20px auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px outset rgb(241, 213, 239);
+}
+.clear {
+  width: 30px;
+  height: 40px;
+  margin: 20px 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.clear img {
+  width: 100%;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  text-align: left;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+li {
+  padding: 0 10px;
+}
+input {
+  width: 50px;
+  height: 30px;
+}
+.size {
+  font-size: 17px;
+  padding-left: 5px;
+}
