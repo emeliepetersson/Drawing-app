@@ -96,10 +96,10 @@ select {
     width: 64px;
   }
   input {
-    width: 40px;
+    width: 35px;
   }
   .size {
-    height: 25px;
+    height: 30px;
     width: 30px;
   }
 }
