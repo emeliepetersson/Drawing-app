@@ -13,6 +13,7 @@ body {
   position: fixed;
   overflow: hidden;
 }
+
 /* Settings bar */
 .settings {
   background-color: rgb(241, 169, 235);
