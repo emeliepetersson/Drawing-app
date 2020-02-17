@@ -4,8 +4,15 @@
 }
 body {
   background-color: rgba(240, 227, 233, 0.733);
+  width: 100vw;
+  height: 100vh;
 }
 
+html,
+body {
+  position: fixed;
+  overflow: hidden;
+}
 /* Settings bar */
 .settings {
   background-color: rgb(241, 169, 235);
