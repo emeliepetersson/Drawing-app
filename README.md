@@ -3,6 +3,8 @@
 # Drawing-app
 Create digital artwork on a canvas on the web to share online and also export as images.
 
+Visit the app here https://online-drawing.netlify.com/!
+
 ## User stories
 - [x] User can draw in a canvas using the mouse
 - [x] User can change the color
@@ -11,7 +13,7 @@ Create digital artwork on a canvas on the web to share online and also export as
 
 ## Bonus features
 - [ ] User can save the artwork as an image (.png, .jpg, etc format)
-- [ ] User can draw different shapes (rectangle, circle, star, etc)
+- [x] User can draw different shapes (rectangle, circle, star, etc)
 - [ ] User can share the artwork on social media
 
 An app idea from https://github.com/florinpop17/app-ideas!
