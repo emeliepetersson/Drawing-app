@@ -3,7 +3,6 @@
   padding: 0;
 }
 body {
-  background-color: rgba(240, 227, 233, 0.733);
   width: 100vw;
   height: 100vh;
 }
@@ -14,9 +13,16 @@ body {
   overflow: hidden;
 }
 
+.pencils {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+}
 /* Settings bar */
 .settings {
-  background-color: rgb(241, 169, 235);
+  background-color: rgb(228, 179, 224);
   width: 40vw;
   height: 60px;
   margin: 10px auto;
@@ -26,15 +32,18 @@ body {
   justify-content: space-between;
   border: 3px outset rgb(241, 213, 239);
 }
-.clear {
-  width: 30px;
-  height: 40px;
+button {
+  width: 40px;
+  height: 50px;
   margin: 20px 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 .clear img {
+  width: 70%;
+}
+img {
   width: 100%;
 }
 ul {
@@ -52,18 +61,30 @@ input {
   height: 30px;
 }
 .size {
-  font-size: 17px;
+  font-size: 15px;
   padding-left: 5px;
+  width: 44px;
+  height: 24px;
+}
+select {
+  font-size: 15px;
+  width: 74px;
+  height: 30px;
+  border: none;
 }
 
 /* Media queries */
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .settings {
-    width: 80vw;
-    margin: 10px auto;
-    padding: 0 20px;
+    width: 85vw;
+    margin: 5px auto;
+    padding: 0 10px;
   }
   ul {
     font-size: 15px;
+  }
+  button {
+    width: 30px;
+    height: 40px;
   }
 }
