@@ -9,9 +9,11 @@ const clear = document.getElementById("clear");
 const strokePaths = [];
 const ellipsePaths = [];
 const squarePaths = [];
+const starPaths = [];
 let currentStrokePath = [];
 let currentEllipsePath = [];
 let currentSquarePath = [];
+let currentStarPath = [];
 
 function setup() {
   // create a canvas which is full width and height
@@ -40,6 +42,9 @@ function draw() {
         break;
       case "square":
         currentSquarePath.push(point);
+        break;
+      case "star":
+        currentStarPath.push(point);
         break;
     }
   }
@@ -70,10 +75,17 @@ function draw() {
     path.forEach(point => {
       stroke(point.color);
       strokeWeight(point.weight);
-      vertex(point.x, point.y - 10);
-      vertex(point.x + 55, point.y - 10);
-      vertex(point.x + 55, point.y + 45);
-      vertex(point.x, point.y + 45);
+      rect(point.x, point.y, 55, 55);
+    });
+    endShape();
+  });
+
+  starPaths.forEach(path => {
+    beginShape();
+    path.forEach(point => {
+      stroke(point.color);
+      strokeWeight(point.weight);
+      star(point.x, point.y, 30, 70, 5);
     });
     endShape();
   });
@@ -84,6 +96,7 @@ function mousePressed() {
   currentStrokePath = [];
   currentEllipsePath = [];
   currentSquarePath = [];
+  currentStarPath = [];
 
   // Push the new path inside the paths array
   switch (shape.value) {
@@ -96,7 +109,26 @@ function mousePressed() {
     case "square":
       squarePaths.push(currentSquarePath);
       break;
+    case "star":
+      starPaths.push(currentStarPath);
+      break;
   }
+}
+
+// create a star shape
+function star(x, y, radius1, radius2, npoints) {
+  let angle = TWO_PI / npoints;
+  let halfAngle = angle / 2.0;
+  beginShape();
+  for (let a = 0; a < TWO_PI; a += angle) {
+    let sx = x + cos(a) * radius2;
+    let sy = y + sin(a) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(a + halfAngle) * radius1;
+    sy = y + sin(a + halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
 }
 
 clear.addEventListener("click", () => {
