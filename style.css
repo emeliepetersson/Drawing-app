@@ -3,12 +3,15 @@
   padding: 0;
 }
 body {
-  background-color: rgb(240, 227, 233);
+  background-color: rgba(240, 227, 233, 0.733);
 }
+
+/* Settings bar */
 .settings {
   background-color: rgb(241, 169, 235);
   width: 40vw;
-  margin: 20px auto;
+  height: 60px;
+  margin: 10px auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -45,6 +48,7 @@ input {
   padding-left: 5px;
 }
 
+/* Media queries */
 @media (max-width: 500px) {
   .settings {
     width: 80vw;
