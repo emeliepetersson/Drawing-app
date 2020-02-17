@@ -16,5 +16,6 @@ Visit the app here https://online-drawing.netlify.com/!
 - [x] User can draw different shapes (rectangle, circle, star, etc)
 - [ ] User can share the artwork on social media
 - [x] User can draw on touch devices
+- [ ] User can erase parts of the drawing
 
 An app idea from https://github.com/florinpop17/app-ideas!
