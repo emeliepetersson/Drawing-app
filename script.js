@@ -2,23 +2,18 @@
 
 const colorInput = document.getElementById("color");
 const weight = document.getElementById("weight");
+const shape = document.getElementById("shape");
 const clear = document.getElementById("clear");
-const paths = [];
-let currentPath = [];
+const strokePaths = [];
+const ellipsePaths = [];
+let currentStrokePath = [];
+let currentEllipsePath = [];
 
 function setup() {
   // create a canvas which is full width and height
   createCanvas(window.innerWidth, window.innerHeight);
   // Add a white background to the canvas
   background(255);
-}
-
-function mousePressed() {
-  // Clean up the currentPath
-  currentPath = [];
-
-  // Push the new path inside the paths array
-  paths.push(currentPath);
 }
 
 function draw() {
@@ -32,11 +27,18 @@ function draw() {
       weight: weight.value
     };
     // Store the location of the mouse in the currentPath array.
-    currentPath.push(point);
+    switch (shape.value) {
+      case "stroke":
+        currentStrokePath.push(point);
+        break;
+      case "ellipse":
+        currentEllipsePath.push(point);
+        break;
+    }
   }
 
   // Looping over all the paths and drawing all the points inside them
-  paths.forEach(path => {
+  strokePaths.forEach(path => {
     beginShape();
     path.forEach(point => {
       stroke(point.color);
@@ -45,6 +47,32 @@ function draw() {
     });
     endShape();
   });
+
+  ellipsePaths.forEach(path => {
+    beginShape();
+    path.forEach(point => {
+      stroke(point.color);
+      strokeWeight(point.weight);
+      ellipse(point.x, point.y, 80, 80);
+    });
+    endShape();
+  });
+}
+
+function mousePressed() {
+  // Clean up the currentPath
+  currentStrokePath = [];
+  currentEllipsePath = [];
+
+  // Push the new path inside the paths array
+  switch (shape.value) {
+    case "stroke":
+      strokePaths.push(currentStrokePath);
+      break;
+    case "ellipse":
+      ellipsePaths.push(currentEllipsePath);
+      break;
+  }
 }
 
 clear.addEventListener("click", () => {
@@ -55,4 +83,4 @@ clear.addEventListener("click", () => {
   background(255);
 });
 
-//Ellipse with width and height of 80px: ellipse(mouseX, mouseY, 80, 80);
+//Ellipse with width and height of 80px:  ellipse(point.x, point.y, 80, 80);
