@@ -93,8 +93,13 @@ select {
   }
   select {
     font-size: 13px;
+    width: 64px;
+  }
+  input {
+    width: 40px;
   }
   .size {
-    height: 30px;
+    height: 25px;
+    width: 30px;
   }
 }
