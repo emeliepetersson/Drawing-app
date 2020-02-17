@@ -33,6 +33,6 @@ function disableScroll() {
     passive: false
   });
 }
-function enableScroll() {
-  document.body.removeEventListener("touchmove", preventDefault);
-}
+// function enableScroll() {
+//   document.body.removeEventListener("touchmove", preventDefault);
+// }
