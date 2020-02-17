@@ -87,4 +87,10 @@ select {
     width: 30px;
     height: 40px;
   }
+  select {
+    font-size: 13px;
+  }
+  .size {
+    height: 30px;
+  }
 }
