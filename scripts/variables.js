@@ -5,13 +5,7 @@ const weight = document.getElementById("weight");
 const shape = document.getElementById("shape");
 const clear = document.getElementById("clear");
 const save = document.getElementById("save");
+const eraser = document.getElementById("eraser");
 
-// Arrays to store the different paths in, based on the shape
-const strokePaths = [];
-const ellipsePaths = [];
-const squarePaths = [];
-const starPaths = [];
-let currentStrokePath = [];
-let currentEllipsePath = [];
-let currentSquarePath = [];
-let currentStarPath = [];
+const paths = [];
+let currentPath = [];
