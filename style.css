@@ -22,15 +22,15 @@ body {
 }
 /* SETTINGS BAR */
 .settings {
-  background-color: rgba(228, 179, 224, 0.884);
+  background-color: rgb(250, 250, 250);
+  box-shadow: 2px 4px 20px rgb(177, 175, 175);
   width: 40vw;
   height: 60px;
-  margin: 40px auto;
+  margin: 50px auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 3px outset rgb(241, 213, 239);
 }
 ul {
   display: flex;
@@ -49,6 +49,9 @@ li {
 input {
   width: 50px;
   height: 30px;
+}
+label {
+  margin-right: 5px;
 }
 .size {
   font-size: 15px;
@@ -113,7 +116,7 @@ select {
   /* SETTINGS BAR*/
   .settings {
     width: 85vw;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 0 10px;
   }
   li {
