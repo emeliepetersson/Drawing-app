@@ -2,6 +2,7 @@
 
 function draw() {
   noFill();
+  frameRate(30);
 
   //If the eraser is checked, make the current path the same color as the canvas
   if (mouseIsPressed && eraser.checked) {

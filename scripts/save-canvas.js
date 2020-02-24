@@ -1,5 +1,6 @@
 "use strict";
 
-save.addEventListener("click", event => {
-  event.preventDefault();
+save.addEventListener("click", () => {
+  createStringDict(paths).saveJSON("myDrawing");
+  console.log("saved!");
 });
