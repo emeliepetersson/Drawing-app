@@ -9,3 +9,4 @@ const eraser = document.getElementById("eraser");
 
 const paths = [];
 let currentPath = [];
+let canvas;
