@@ -12,7 +12,7 @@ Visit the app here https://online-drawing.netlify.com/!
 - [x] User can press a button to clear the canvas
 
 ## Bonus features
-- [ ] User can save the artwork as an image (.png, .jpg, etc format)
+- [x] User can save the artwork as an image (.png, .jpg, etc format)
 - [x] User can draw different shapes (rectangle, circle, star, etc)
 - [ ] User can share the artwork on social media
 - [x] User can draw on touch devices
